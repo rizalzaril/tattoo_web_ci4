@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwigley&family=Rye&display=swap");
+
+:root {
+  --golden: rgba(240, 172, 46, 0.842);
+}
+
+body {
+  background: black;
+}
+
+/* text color custom */
+
+.text-golden {
+  color: var(--golden);
+}
+
+.text-heading-content {
+  font-family: "Qwigley", serif;
+  font-size: 4rem;
+}
+
+/* bg color custom */
+.bg-golden {
+  background: var(--golden);
+}
+
+/* font custom */
+.font-rye {
+  font-family: "Rye", serif;
+}
+
+.font-rye-bold {
+  font-family: "Rye", serif;
+  font-weight: bold;
+}
+
+/* Nav custom */
+
+.navbar-nav {
+  font-family: "Rye", serif;
+  font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--golden) !important; /* Warna teks saat aktif */
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--golden); /* Warna saat hover */
+}
+
+.opened-container {
+  /* position: relative; */
+  padding-bottom: 200px;
+  padding-top: 0px;
+  border-radius: 10px;
+  z-index: 2;
+  letter-spacing: 0px;
+}
+
+.opened-container::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgb(14, 13, 13);
+  opacity: 70%; /* Mengurangi opacity hanya pada background */
+  z-index: -1; /* Pastikan tetap di belakang teks */
+}
+
+.about-img {
+  width: 100%;
+  object-fit: cover;
+  height: 80%;
+}
+
+.about-caption {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  left: -150px;
+  top: -100px;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+.about-caption::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 13, 13);
+  opacity: 90%; /* Mengurangi opacity hanya pada background */
+  z-index: -1; /* Pastikan tetap di belakang teks */
+  border-radius: 20px;
+  box-shadow: 25px 22px 5px -4px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 25px 22px 5px -4px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 25px 22px 5px -4px rgba(0, 0, 0, 0.64);
+}
+
+.about-caption::before:hover {
+  box-shadow: 4px 1px 10px 0px var(--golden);
+}
+
+.bg-blur-10 {
+  filter: blur(10px);
+}
+
+.bg-body-opened {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  opacity: 50%;
+  top: 20%;
+  object-fit: cover;
+}
+
+.bg-1 {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  opacity: 50%;
+  top: 20%;
+  object-fit: cover;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+}
+
+.bg-2 {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  opacity: 30%;
+  top: 250%;
+  object-fit: cover;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+}
+
+#sliderContent {
+  transform: translateX(-100%);
+}
+
+.wa-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.wa-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.wa-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .text-heading-content {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .opened-container::before {
+    /* position: relative; */
+    height: 170%;
+  }
+
+  .about-img {
+    width: 80%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-caption {
+    inset: 0px;
+    width: 80%;
+    left: 10;
+    text-align: justify;
+    top: -100px;
+  }
+
+  .about-caption::before {
+    border-radius: 0%;
+    height: 100%;
+  }
+
+  .text-heading-content {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-heading-content {
+    font-size: 3rem;
+  }
+
+  .bg-body-opened {
+    height: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .text-heading-content {
+    font-size: 3rem;
+  }
+
+  .bg-body-opened {
+    height: 50%;
+  }
+}
+
+@media (max-width: 360px) {
+  .text-heading-content {
+    font-size: 3rem;
+  }
+
+  .bg-body-opened {
+    height: 50%;
+  }
+}

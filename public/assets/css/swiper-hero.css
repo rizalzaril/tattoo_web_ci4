@@ -1,0 +1,135 @@
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  height: 100%;
+}
+
+.swiper-slide p {
+  font-size: 1rem;
+  color: white;
+  padding: 0 10px;
+}
+
+.swiper-slide .slider-1 {
+  left: 30%;
+}
+
+.swiper-slide h2 {
+  font-family: "Qwigley", serif;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 80%;
+  color: white;
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.swiper {
+  height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    height: 500px;
+  }
+  .swiper-slide h2 {
+    font-size: 4.5rem;
+  }
+  .swiper-slide p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 400px;
+  }
+  .swiper-slide h2 {
+    font-size: 3.5rem;
+    margin: 0 auto;
+  }
+  .swiper-slide p {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .swiper-slide .slider-1 {
+    left: 50%;
+  }
+}
+
+/* HP Realme 3 (lebar 360px - 720px) */
+@media (max-width: 720px) {
+  .swiper {
+    height: 350px;
+  }
+  .swiper-slide h2 {
+    font-size: 2.8rem;
+  }
+  .swiper-slide p {
+    font-size: 0.8rem;
+  }
+  .swiper-slide .slider-1 {
+    left: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 300px;
+  }
+  .swiper-slide h2 {
+    font-size: 2.8rem;
+  }
+  .swiper-slide p {
+    font-size: 0.8rem;
+  }
+  .swiper-slide .slider-1 {
+    left: 50%;
+  }
+}
+
+/* HP Kecil (375px ke bawah) */
+@media (max-width: 375px) {
+  .swiper {
+    height: 250px;
+  }
+  .swiper-slide h2 {
+    font-size: 2.5rem;
+  }
+  .swiper-slide p {
+    font-size: 0.75rem;
+  }
+  .swiper-slide .slider-1 {
+    left: 50%;
+  }
+}
+
+/* HP Mini (360px ke bawah) */
+@media (max-width: 360px) {
+  .swiper {
+    height: 330px;
+  }
+  .swiper-slide h2 {
+    font-size: 2.8rem;
+  }
+  .swiper-slide p {
+    font-size: 0.7rem;
+  }
+  .swiper-slide .slider-1 {
+    left: 50%;
+  }
+}
